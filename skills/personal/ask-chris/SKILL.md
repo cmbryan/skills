@@ -1,10 +1,10 @@
 ---
-name: ask-me
+name: ask-chris
 description: Ask how my personal fork of Matt Pocock's skills is set up, how to change a skill, take his updates, or send a change back to him.
 disable-model-invocation: true
 ---
 
-# Ask Me
+# Ask Chris
 
 You forgot how this was set up, so ask.
 
@@ -24,7 +24,7 @@ The skills come from `mattpocock/skills`. They are not installed from a registry
 | A second working copy for change branches | `~/Documents/skills-work` (a git worktree of the clone) |
 | Live skill folders (symlinks into the clone) | `~/.claude/skills`, `~/.agents/skills` |
 | Backup of the old installer-managed install | `~/Documents/skills-backup-20261017` |
-| This skill | `skills/personal/ask-me` inside the clone, on `mine` only |
+| This skill | `skills/personal/ask-chris` inside the clone, on `mine` only |
 
 ## Branches
 
@@ -34,7 +34,7 @@ The skills come from `mattpocock/skills`. They are not installed from a registry
 
 My changes so far, beyond Matt's code:
 - `implement-spec` understands `ready-for-human` tickets: it never implements or closes them, tells me when one unlocks, and pauses when every remaining agent ticket waits on one. Branch `implement-spec-human-tickets`. Not yet offered to Matt.
-- `ask-me`, mine only, on branch `ask-me`. It is never sent to Matt.
+- `ask-chris`, mine only, on branch `ask-chris`. It is never sent to Matt.
 
 ## How to change a skill
 
