@@ -1,0 +1,5 @@
+interface:
+  display_name: "Ask Me"
+  short_description: "How my fork of the skills is set up"
+policy:
+  allow_implicit_invocation: false
