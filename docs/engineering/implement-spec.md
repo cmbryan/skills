@@ -55,6 +55,10 @@ It does now, though it didn't at first. Users running the in-progress version no
 
 Worktrees don't remove collisions; they postpone them to merge time. A blocking edge written from ticket text is a guess about which files each ticket will touch, and two tickets on "different parts of the codebase" still share a message catalogue, a config registry, or a type. Each implementer sees only its own ticket and the shared notes, never the other's work in progress, so one user's web and mobile tickets added the same string as `blockedSince` and `blockedOn`. When two frontier tickets touch one shared file, either add a blocking edge between them so they run one after the other, or have the exploration notes fix the exact names each ticket adds.
 
+**Some of my tickets are manual steps only I can do. What happens to them?**
+
+Label them `ready-for-human`. The skill never implements or closes those. It runs the agent tickets on the frontier, tells you when a manual ticket has all its blockers done, and keeps going. If every agent ticket left is blocked on a manual one, it stops, lists what you need to do and which tickets wait on it, and ends its turn. Tell it to continue once you have closed the manual tickets. A manual ticket that needs the code on the main branch gets a prompt to merge the PR first.
+
 **Blocked tickets never start, even after their blocker has merged.**
 
 This is a known problem on GitHub. The tracker's blocked-by count only drops when a blocker *closes*, and tickets typically close when the PR merges, which is the end of the run. The tracker is the right source for the starting graph but a stale one mid-run. Tell the orchestrator to track which tickets have merged into the integration branch itself and compute the frontier from that.
