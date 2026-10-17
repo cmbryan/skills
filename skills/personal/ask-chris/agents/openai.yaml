@@ -1,5 +1,5 @@
 interface:
-  display_name: "Ask Me"
+  display_name: "Ask Chris"
   short_description: "How my fork of the skills is set up"
 policy:
   allow_implicit_invocation: false
